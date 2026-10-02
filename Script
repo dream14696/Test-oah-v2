@@ -278,7 +278,7 @@ local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, -150, 0, 26)
 Title.Position = UDim2.fromOffset(16, 4)
 Title.BackgroundTransparency = 1
-Title.Text = "OAH | MENÚ DE GUIÓN"
+Title.Text = "OAH | MENÃš DE GUIÃ“N"
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 18
 Title.TextColor3 = Color3.fromRGB(0, 220, 255)
@@ -350,7 +350,7 @@ OptionContainer.Position = UDim2.fromOffset(0, 35)
 OptionContainer.BackgroundTransparency = 1
 OptionContainer.Parent = ContentArea
 
--- 2. DESPUÉS CREAMOS LA CABECERA Y EL BUSCADOR (Para que quede al frente y nunca debajo de los botones)
+-- 2. DESPUÃ‰S CREAMOS LA CABECERA Y EL BUSCADOR (Para que quede al frente y nunca debajo de los botones)
 local ContentHeader = Instance.new("Frame")
 ContentHeader.Size = UDim2.new(1, 0, 0, 35)
 ContentHeader.BackgroundTransparency = 1
@@ -389,7 +389,7 @@ local SearchInput = Instance.new("TextBox")
 SearchInput.Size = UDim2.new(1, -26, 1, 0)
 SearchInput.Position = UDim2.fromOffset(24, 0)
 SearchInput.BackgroundTransparency = 1
-SearchInput.PlaceholderText = "Buscar botón..."
+SearchInput.PlaceholderText = "Buscar botÃ³n..."
 SearchInput.Text = ""
 SearchInput.TextColor3 = Color3.new(1, 1, 1)
 SearchInput.PlaceholderColor3 = Color3.fromRGB(120, 140, 160)
@@ -417,7 +417,7 @@ local SearchLayout = Instance.new("UIListLayout")
 SearchLayout.Padding = UDim.new(0, 2)
 SearchLayout.Parent = SearchResultsScroll
 
--- BOTÓN DE REDIMENSIONAR
+-- BOTÃ“N DE REDIMENSIONAR
 local ResizeBtn = Instance.new("ImageButton")
 ResizeBtn.Size = UDim2.fromOffset(22, 22)
 ResizeBtn.AnchorPoint = Vector2.new(1, 1)
@@ -688,7 +688,7 @@ local function buildOption(nombre, typeId, parentScroll, code, valueEnabled, val
 		lbl.Size = UDim2.new(1, -20, 1, 0)
 		lbl.Position = UDim2.fromOffset(10, 0)
 		lbl.BackgroundTransparency = 1
-		lbl.Text = "▶ " .. nombre
+		lbl.Text = "â–¶ " .. nombre
 		lbl.Font = Enum.Font.Gotham
 		lbl.TextColor3 = Color3.new(1, 1, 1)
 		lbl.TextXAlignment = Enum.TextXAlignment.Left
@@ -863,7 +863,7 @@ end)
 local first = createCategory("Principal")
 
 buildOption(
-	"Súper Velocidad (Ejemplo)",
+	"SÃºper Velocidad (Ejemplo)",
 	1,
 	first.Scroll,
 	[[
@@ -1020,7 +1020,7 @@ local ReturnEditorBtn = Instance.new("TextButton")
 ReturnEditorBtn.Size = UDim2.fromOffset(100, 28)
 ReturnEditorBtn.Position = UDim2.new(1, -190, 0, 10)
 ReturnEditorBtn.BackgroundColor3 = Color3.fromRGB(0, 120, 225)
-ReturnEditorBtn.Text = "✎ Editar"
+ReturnEditorBtn.Text = "âœŽ Editar"
 ReturnEditorBtn.Font = Enum.Font.GothamBold
 ReturnEditorBtn.TextSize = 12
 ReturnEditorBtn.TextColor3 = Color3.new(1, 1, 1)
@@ -1100,7 +1100,7 @@ local SideTitle = Instance.new("TextLabel")
 SideTitle.Size = UDim2.new(1, -40, 1, 0)
 SideTitle.Position = UDim2.fromOffset(10, 0)
 SideTitle.BackgroundTransparency = 1
-SideTitle.Text = "CATEGORÍAS"
+SideTitle.Text = "CATEGORÃAS"
 SideTitle.Font = Enum.Font.GothamBold
 SideTitle.TextSize = 11
 SideTitle.TextColor3 = Color3.fromRGB(140, 160, 185)
@@ -1295,7 +1295,7 @@ local CurrentCatTitle = Instance.new("TextLabel")
 CurrentCatTitle.Size = UDim2.new(1, -210, 1, 0)
 CurrentCatTitle.Position = UDim2.fromOffset(10, 0)
 CurrentCatTitle.BackgroundTransparency = 1
-CurrentCatTitle.Text = "Selecciona una categoría"
+CurrentCatTitle.Text = "Selecciona una categorÃ­a"
 CurrentCatTitle.Font = Enum.Font.GothamBold
 CurrentCatTitle.TextSize = 13
 CurrentCatTitle.TextColor3 = Color3.new(1, 1, 1)
@@ -1542,7 +1542,7 @@ end
 
 local function createModalPanel(nombre, ancho, alto)
 	local p = Instance.new("Frame")
-	p.Name = name
+	p.Name = nombre
 	p.AnchorPoint = Vector2.new(0.5, 0.5)
 	p.Position = UDim2.new(0.5, 0, 0.5, 0)
 	p.BackgroundColor3 = Color3.fromRGB(15, 20, 30)
@@ -1551,7 +1551,7 @@ local function createModalPanel(nombre, ancho, alto)
 	p.ZIndex = 51
 	p.Parent = ModalOverlay
 
-	p:SetAttribute("TargetSize", UDim2.new(0, w, 0, h))
+	p:SetAttribute("TargetSize", UDim2.new(0, ancho, 0, alto))
 	cr(p, 10)
 	st(p, Color3.fromRGB(0, 170, 255), 1)
 	return p
@@ -1566,7 +1566,7 @@ local CatModalTitle = Instance.new("TextLabel", CatModal)
 CatModalTitle.Size = UDim2.new(1, 0, 0, 30)
 CatModalTitle.Position = UDim2.fromOffset(0, 10)
 CatModalTitle.BackgroundTransparency = 1
-CatModalTitle.Text = "CATEGORÍA"
+CatModalTitle.Text = "CATEGORÃA"
 CatModalTitle.Font = Enum.Font.GothamBold
 CatModalTitle.TextColor3 = Color3.new(1, 1, 1)
 
@@ -1576,7 +1576,7 @@ CatInput.Position = UDim2.fromOffset(20, 60)
 CatInput.BackgroundColor3 = Color3.fromRGB(10, 14, 22)
 CatInput.TextColor3 = Color3.new(1, 1, 1)
 CatInput.Font = Enum.Font.Gotham
-CatInput.PlaceholderText = "Nombre de la categoría..."
+CatInput.PlaceholderText = "Nombre de la categorÃ­a..."
 CatInput.ClearTextOnFocus = false
 cr(CatInput, 6)
 st(CatInput, Color3.fromRGB(40, 50, 70), 1)
@@ -1608,7 +1608,7 @@ local OptModalTitle = Instance.new("TextLabel", OptModal)
 OptModalTitle.Size = UDim2.new(1, 0, 0, 30)
 OptModalTitle.Position = UDim2.fromOffset(0, 10)
 OptModalTitle.BackgroundTransparency = 1
-OptModalTitle.Text = "OPCIÓN"
+OptModalTitle.Text = "OPCIÃ“N"
 OptModalTitle.Font = Enum.Font.GothamBold
 OptModalTitle.TextColor3 = Color3.new(1, 1, 1)
 
@@ -1618,7 +1618,7 @@ OptInput.Position = UDim2.fromOffset(20, 45)
 OptInput.BackgroundColor3 = Color3.fromRGB(10, 14, 22)
 OptInput.TextColor3 = Color3.new(1, 1, 1)
 OptInput.Font = Enum.Font.Gotham
-OptInput.PlaceholderText = "Nombre de la opción..."
+OptInput.PlaceholderText = "Nombre de la opciÃ³n..."
 OptInput.ClearTextOnFocus = false
 cr(OptInput, 6)
 st(OptInput, Color3.fromRGB(40, 50, 70), 1)
@@ -1675,7 +1675,7 @@ local ValueLabel = Instance.new("TextLabel", OptModal)
 ValueLabel.Size = UDim2.new(1, -100, 0, 30)
 ValueLabel.Position = UDim2.fromOffset(20, 138)
 ValueLabel.BackgroundTransparency = 1
-ValueLabel.Text = "Activar cuadro de texto de valor de función"
+ValueLabel.Text = "Activar cuadro de texto de valor de funciÃ³n"
 ValueLabel.Font = Enum.Font.Gotham
 ValueLabel.TextSize = 10
 ValueLabel.TextColor3 = Color3.fromRGB(190, 200, 215)
@@ -1715,7 +1715,7 @@ ValueInput.Text = "16"
 ValueInput.ClearTextOnFocus = false
 ValueInput.Visible = false
 ValueInput.ZIndex = 59
-cr(ValorEntrada, 6)
+cr(ValueInput, 6)
 st(ValueInput, Color3.fromRGB(40, 50, 70), 1)
 
 local function updateValueUI()
@@ -1745,7 +1745,7 @@ CodeInput.BackgroundColor3 = Color3.fromRGB(10, 14, 22)
 CodeInput.TextColor3 = Color3.fromRGB(0, 220, 255)
 CodeInput.Font = Enum.Font.Code
 CodeInput.TextSize = 10
-CodeInput.PlaceholderText = "-- Código Lua a ejecutar..."
+CodeInput.PlaceholderText = "-- CÃ³digo Lua a ejecutar..."
 CodeInput.Text = "local char = Player.Character\nif char and char:FindFirstChild('Humanoid') then\n\tif state then\n\t\tchar.Humanoid.WalkSpeed = value\n\telse\n\t\tchar.Humanoid.WalkSpeed = 16\n\tend\nend"
 CodeInput.ClearTextOnFocus = false
 CodeInput.MultiLine = true
@@ -1782,7 +1782,7 @@ local ScriptModalTitle = Instance.new("TextLabel", ScriptModal)
 ScriptModalTitle.Size = UDim2.new(1, 0, 0, 30)
 ScriptModalTitle.Position = UDim2.fromOffset(0, 10)
 ScriptModalTitle.BackgroundTransparency = 1
-ScriptModalTitle.Text = "SÓLO LECTURA - GUIÓN GENERADO"
+ScriptModalTitle.Text = "SÃ“LO LECTURA - GUIÃ“N GENERADO"
 ScriptModalTitle.Font = Enum.Font.GothamBold
 ScriptModalTitle.TextColor3 = Color3.new(1, 1, 1)
 
@@ -1956,7 +1956,7 @@ local function buildOption(
 		lbl.Size = UDim2.new(1, -20, 1, 0)
 		lbl.Position = UDim2.fromOffset(10, 0)
 		lbl.BackgroundTransparency = 1
-		lbl.Text = "▶ " .. nombre
+		lbl.Text = "â–¶ " .. nombre
 		lbl.Font = Enum.Font.Gotham
 		lbl.TextColor3 = Color3.new(1, 1, 1)
 		lbl.TextXAlignment = Enum.TextXAlignment.Left
@@ -2332,7 +2332,7 @@ ExecBtn.MouseButton1Click:Connect(function()
 		if cat.Label then cat.Label.Size = UDim2.new(1, 0, 1, 0) end
 	end
 
-	Title.Text = "OAH | MENÚ DE GUIÓN"
+	Title.Text = "OAH | MENÃš DE GUIÃ“N"
 	Title.TextColor3 = Color3.fromRGB(0, 220, 255)
 
 	tw(Main, 0.4, { Size = expandedSize })
@@ -2468,7 +2468,7 @@ end)
 
 local firstScriptCat = createCategory("Principal")
 buildOption(
-	"Súper Velocidad (Ejemplo)",
+	"SÃºper Velocidad (Ejemplo)",
 	1,
 	firstScriptCat.Scroll,
 	[[
@@ -2506,7 +2506,7 @@ task.spawn(function()
 	XenonBar.BackgroundTransparency = 0
 	tw(XenonBar, 0.3, { BackgroundTransparency = 1 })
 
-	print("[OAH] ¡Menú cargado correctamente!")
+	print("[OAH] Â¡MenÃº cargado correctamente!")
 end)
 
 do
@@ -2951,10 +2951,10 @@ local Days={
 	"domingo",
 	"lunes",
 	"martes",
-	"miércoles",
+	"miÃ©rcoles",
 	"jueves",
 	"viernes",
-	"sábado"
+	"sÃ¡bado"
 }
 
 local Months={
@@ -3118,7 +3118,7 @@ Info.Parent=GamePage
 local Follow=Instance.new("TextLabel")
 Follow.Size=UDim2.new(1,0,0,22)
 Follow.BackgroundTransparency=1
-Follow.Text="Sígueme para más scripts"
+Follow.Text="SÃ­gueme para mÃ¡s scripts"
 Follow.Font=Enum.Font.GothamBold
 Follow.TextSize=12
 Follow.TextColor3=Color3.new(1,1,1)
@@ -3143,7 +3143,7 @@ local ThemeButton=Instance.new("TextButton")
 ThemeButton.Size=UDim2.fromOffset(90,28)
 ThemeButton.Position=UDim2.new(1,-90,0,66)
 ThemeButton.BackgroundColor3=Color3.fromRGB(15,22,32)
-ThemeButton.Text="Oscuro ▼"
+ThemeButton.Text="Oscuro â–¼"
 ThemeButton.Font=Enum.Font.Gotham
 ThemeButton.TextSize=10
 ThemeButton.TextColor3=Color3.new(1,1,1)
@@ -3189,7 +3189,7 @@ local function ApplyTheme()
 	if Theme=="Light" then
 		Main.BackgroundColor3=Color3.fromRGB(242,245,250)
 		MainStroke.Color=Color3.fromRGB(0,150,230)
-		ThemeButton.Text="Claro ▼"
+		ThemeButton.Text="Claro â–¼"
 		ThemeButton.BackgroundColor3=Color3.fromRGB(220,225,235)
 		ThemeButton.TextColor3=Color3.fromRGB(20,25,35)
 		ThemeButtonStroke.Color=Color3.fromRGB(0,140,220)
@@ -3247,7 +3247,7 @@ local function ApplyTheme()
 	else
 		Main.BackgroundColor3=Color3.fromRGB(4,6,10)
 		MainStroke.Color=Color3.fromRGB(0,125,255)
-		ThemeButton.Text="Oscuro ▼"
+		ThemeButton.Text="Oscuro â–¼"
 		ThemeButton.BackgroundColor3=Color3.fromRGB(15,22,32)
 		ThemeButton.TextColor3=Color3.new(1,1,1)
 		ThemeButtonStroke.Color=Color3.fromRGB(0,125,255)
@@ -3387,7 +3387,7 @@ local function setupAutoExecute()
 	local scriptCode=[[
 		if not _G.OP_ADIVINE_HUB_LOADED then
 			_G.OP_ADIVINE_HUB_LOADED = true
-			-- Código cargador de la semilla de autoejecución
+			-- CÃ³digo cargador de la semilla de autoejecuciÃ³n
 		end
 	]]
 
@@ -3471,7 +3471,7 @@ local ConfirmText=Instance.new("TextLabel")
 ConfirmText.Size=UDim2.new(1,-20,0,50)
 ConfirmText.Position=UDim2.fromOffset(10,10)
 ConfirmText.BackgroundTransparency=1
-ConfirmText.Text="¿Quieres salir del menú?"
+ConfirmText.Text="Â¿Quieres salir del menÃº?"
 ConfirmText.Font=Enum.Font.GothamBold
 ConfirmText.TextSize=14
 ConfirmText.TextColor3=Color3.new(1,1,1)
@@ -3712,7 +3712,7 @@ local Close=Instance.new("TextButton")
 Close.Size=UDim2.fromOffset(32,32)
 Close.Position=UDim2.new(1,-38,0,5)
 Close.BackgroundTransparency=1
-Close.Text="×"
+Close.Text="Ã—"
 Close.Font=Enum.Font.GothamBold
 Close.TextSize=23
 Close.TextColor3=Color3.new(1,1,1)
@@ -3957,7 +3957,7 @@ Min.MouseButton1Click:Connect(function()
 	minimized=not minimized
 
 	if minimized then
-		Min.Text="□"
+		Min.Text="â–¡"
 
 		setBody(false)
 
@@ -4064,7 +4064,7 @@ local NoticeText=Instance.new("TextLabel")
 NoticeText.Size=UDim2.new(1,-16,1,-8)
 NoticeText.Position=UDim2.fromOffset(8,4)
 NoticeText.BackgroundTransparency=1
-NoticeText.Text="te gusta nuestro menú,\n¡nos alegra cada momento que nos usas!"
+NoticeText.Text="te gusta nuestro menÃº,\nÂ¡nos alegra cada momento que nos usas!"
 NoticeText.Font=Enum.Font.GothamBold
 NoticeText.TextSize=11
 NoticeText.TextWrapped=true
@@ -4269,7 +4269,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/dream14696/Chat/refs/
     _OtherButton.Position = UDim2.new(0.5, -150, 0, 54)
     _OtherButton.Size = UDim2.new(0, 300, 0, 30)
     _OtherButton.Font = Enum.Font.GothamBold
-    _OtherButton.Text = "¿Cargar otros guiones?"
+    _OtherButton.Text = "Â¿Cargar otros guiones?"
     _OtherButton.TextColor3 = Color3.fromRGB(255,255,255)
     _OtherButton.TextSize = 13
     _OtherButton.ZIndex = 1000
