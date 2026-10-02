@@ -87,7 +87,7 @@ local function tw(o, t, p)
 				Enum.EasingStyle.Quart,
 				Enum.EasingDirection.Out
 			),
-			pag
+			p
 		)
 	end)
 
@@ -106,7 +106,7 @@ local function st(o, c, w)
 	local s = Instance.new("UIStroke")
 	s.Color = c
 	s.Thickness = w
-	s.Parent = or
+	s.Parent = o
 	return
 end
 
@@ -189,7 +189,7 @@ local function tw(o, t, p)
 			Enum.EasingStyle.Quart,
 			Enum.EasingDirection.Out
 		),
-		pag
+		p
 	):Play()
 end
 
@@ -203,7 +203,7 @@ local function st(o, c, w)
 	local s = Instance.new("UIStroke")
 	s.Color = c
 	s.Thickness = w
-	s.Parent = or
+	s.Parent = o
 	return
 end
 
@@ -247,7 +247,7 @@ task.spawn(function()
 		local endX = p.Position.X.Scale + math.random(-10, 10) / 100
 
 		local t = TweenService:Create(
-			pag,
+			p,
 			TweenInfo.new(duration, Enum.EasingStyle.Linear),
 			{
 				Position = UDim2.new(endX, 0, 1.1, 0),
@@ -627,7 +627,7 @@ local function buildOption(nombre, typeId, parentScroll, code, valueEnabled, val
 	local estado = false
 
 	local function triggerAction(newState)
-		estado = nuevoEstado
+		estado = newState
 		activeOptionsRegistry[optionData] = estado and optionData or nil
 
 		if typeId == 1 then
@@ -659,7 +659,7 @@ local function buildOption(nombre, typeId, parentScroll, code, valueEnabled, val
 			tw(cont, 0.4, { BackgroundColor3 = Color3.fromRGB(18, 24, 34) })
 		end
 
-		ejecutarCodigoConsola(optionData.Code, state, optionData.ValueDefault)
+		ejecutarCodigoConsola(optionData.Code, newState, optionData.ValueDefault)
 	end
 
 	if typeId == 1 then
@@ -931,7 +931,7 @@ task.spawn(function()
 		local endX = p.Position.X.Scale + math.random(-10, 10) / 100
 
 		local t = TweenService:Create(
-			pag,
+			p,
 			TweenInfo.new(duration, Enum.EasingStyle.Linear),
 			{
 				Position = UDim2.new(endX, 0, 1.1, 0),
@@ -1243,7 +1243,7 @@ DateText.BackgroundTransparency = 1
 DateText.Font = Enum.Font.Code
 DateText.TextSize = 11
 DateText.TextColor3 = Color3.fromRGB(0, 210, 255)
-TextXAlignment = Enum.TextXAlignment.Left
+DateText.TextXAlignment = Enum.TextXAlignment.Left
 DateText.Parent = WelcomePanel
 
 local function UpdateDate()
@@ -1254,11 +1254,11 @@ local function UpdateDate()
 	)
 end
 
-updateDate()
+UpdateDate()
 
 task.spawn(function()
 	while GUI.Parent do
-		updateDate()
+		UpdateDate()
 		task.wait(1)
 	end
 end)
@@ -1942,7 +1942,7 @@ local function buildOption(
 		cr(circle, 8)
 
 		optionData.OnTrigger = function(newState)
-			estado = nuevoEstado
+			estado = newState
 			tw(bg, 0.3, {
 				BackgroundColor3 = estado and Color3.fromRGB(0, 170, 255) or Color3.fromRGB(30, 40, 50)
 			})
@@ -1977,7 +1977,7 @@ local function buildOption(
 		lbl.TextXAlignment = Enum.TextXAlignment.Left
 
 		optionData.OnTrigger = function(newState)
-			estado = nuevoEstado
+			estado = newState
 			if estado then
 				lbl.Text = "[ON] " .. nombre
 				lbl.TextColor3 = Color3.fromRGB(0, 220, 255)
